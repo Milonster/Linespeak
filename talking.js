@@ -42,7 +42,7 @@ function binaryCircles() {
     for (var i = 0; i < binary.length; i++){  
     if (binary[i] !== "00100000"){
       bonk = binary[i];
-      var hold = scale/bonk.length;
+      var hold = scale/binary.length;
       var angle = 3/2*PI;
       for (var q=0; q < bonk.length;  q++){
           rb=ra+hold;
