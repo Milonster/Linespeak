@@ -38,11 +38,13 @@ function binaryCircles() {
   convert();
   var bonk;
   var rb;
+  var count;
   hide();
     for (var i = 0; i < binary.length; i++){  
     if (binary[i] !== "00100000"){
+      count = count+1;
       bonk = binary[i];
-      var hold = scale/binary.length;
+      var hold = scale/bonk.length;
       var angle = 3/2*PI;
       for (var q=0; q < bonk.length;  q++){
           rb=ra+hold;
@@ -64,7 +66,7 @@ function binaryCircles() {
       }
       else{
           ra=0;
-          midy=midy-scale;
+          midy=midy-(rb+hold*count);
       }
       
     }
